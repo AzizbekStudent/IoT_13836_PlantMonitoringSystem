@@ -1,0 +1,106 @@
+<!--Student ID: 00013836-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IoT</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="Project_Label">
+        <h1 class="Project_Name">Plant Monitoring System</h1>
+        <p class="Project_Author">Student ID: 00013836</p>
+    </div>
+    <div class="MainHolder">
+        <div class="InfoContainer">
+            <button id="buzzer" class="btn_Class" onclick="press()">Buzzer</button>
+            <!--Temperature div-->
+            <div class="SensorStatistics">
+                <p id="temperature" class="paragraphs">Temperature: <span>Loading...</span> &#8451;</p>
+                <div class="thermometer">
+                    <div id="thermometerText">
+                        <div id="temperatureLevel"></div>
+                    </div>
+                    <div class="thermometerBulb"></div>
+                </div>
+            </div>
+            <!--Humidity div-->
+            <div class="SensorStatistics">
+                <p id="humidity" class="paragraphs">Humidity: <span>Loading...</span> %</p>
+                <div class="RoundFill">
+                    <div class="RoundFill_Center">
+                        <div class="RoundFill_Radius" id="RoundFill_Radius"></div>
+                        <div class="RoundFill_Percentage" id="RoundFill_Percentage">0%</div>
+                    </div>
+                </div>
+            </div>
+            <!--Water div-->
+            <div class="SensorStatistics">
+                <p id="water" class="paragraphs">Water: <span>Loading...</span></p>
+                <div class="water_Bar">
+                    <div id="water_Fill"></div>
+                </div>
+            </div>
+            <!--Flame div-->
+            <div class="SensorStatistics">
+                <p id="flame" class="paragraphs">Flame: <span>Loading...</span></p>
+                <div id="flameIcon">
+                    🔥
+                </div>
+                <button id="flameBtn" class="btn_Class" onclick="pressFlame()">Change Flame Status</button>
+            </div>
+            <!--Height div-->
+            <div class="SensorStatistics">
+                <p id="height" class="paragraphs">Height: <span>Loading...</span> sm</p>
+                <div class="height_Bar">
+                    <div id="height_Fill"></div>
+                </div>
+            </div>
+            <!--Color input div-->
+            <div class="colorChanger">
+                <div>Change color of SMD RGB</div>
+                <div>
+                    <label for="red">Red:</label>
+                    <input type="number" id="red" name="red" min="0" max="255">
+                </div>
+                <div>
+                    <label for="green">Green:</label>
+                    <input type="number" id="green" name="green" min="0" max="255">
+                </div>
+                <div>
+                    <label for="blue">Blue:</label>
+                    <input type="number" id="blue" name="blue" min="0" max="255">
+                </div>
+                <div class="ColorPreview" id="ColorPreviewCube">Chosen Color</div>
+                <button onclick="setRGBValues()">Set RGB</button>
+            </div>
+        </div>
+        <div class="ImageContainer">
+            <img id="plant_Image" src="https://images.squarespace-cdn.com/content/v1/61676af60192d91a18ee0455/1638753511670-C45AVK42K221IR50KZRP/main_mediaistock-511977294.jpg" alt="Plant Image">
+            <!--CW requirement to represent data in form of chart or graph-->
+            <!--Chosen method is line graph-->
+            <div class="chart_container">
+                <canvas id="dataChart"></canvas>
+            </div>
+        </div>
+    </div>  
+    
+    <!--Firebase connection important libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
+
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.6.0/firebase-app.js";
+   
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.6.0/firebase-analytics.js";
+    </script>
+   
+    <!--For displaying charts-->    
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!--Script.js file-->
+    <script  type="text/javascript" src="scripts.js" ></script>
+
+</body>
+</html>

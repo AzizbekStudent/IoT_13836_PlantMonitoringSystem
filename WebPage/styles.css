@@ -1,0 +1,334 @@
+/* Student ID: 00013836 */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #181818; 
+    color: #f5f5f5; 
+    margin: 0;
+    padding: 0;
+}
+.Project_Label {
+    background-color: #2c2c2c; 
+    color: #ffffff; 
+    text-align: center;
+    padding: 20px 0;
+    border-bottom: 2px solid #444444;
+    margin-bottom: 3%;
+}
+.Project_Name {
+    font-size: 28px;
+    font-weight: bold;
+    margin: 0;
+}
+.Project_Author {
+    font-size: 16px;
+    margin-top: 2%;
+    font-style: italic;
+}
+.MainHolder {
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 2%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+.InfoContainer {
+    flex: 1;
+    text-align: left;
+    background-color: #282828; 
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.6); 
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.ImageContainer {
+    flex: 1;
+    max-width: 500px;
+    text-align: center;
+    background-color: #282828; 
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.6); 
+    padding: 20px;
+}
+#plant_Image {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+}
+.SensorStatistics {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2%;
+    padding: 10px;
+    box-shadow: 0px 4px 10px rgba(25, 87, 140, 0.3);
+    border: 3px dotted #ff0707;
+}
+.paragraphs {
+    font-family: 'Arial', sans-serif;
+    font-size: 18px;
+    color: #f50f0f; 
+    margin: 0;
+    line-height: 1.5;
+}
+.btn_Class {
+    background-color: #0c6f1d;
+    border: 5px solid #00bcff;
+    color: white;
+    padding: 12px 28px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.btn_Class:hover {
+    background-color: #293e16;
+}
+/*SMD RGB Color changins*/
+.colorChanger {
+    margin: 4% 2%;
+    padding: 10px;
+    background-color: #333333;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    width: 92%;
+    text-align: left;
+    color: #ffffff;
+}
+.colorChanger div {
+    margin-bottom: 1%;
+    padding: 4px;
+}
+.colorChanger label {
+    font-size: 14px;
+    margin-bottom: 5px;
+    display: block;
+    font-weight: bold;
+}
+.colorChanger input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #444444; 
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+    background-color: #444444; 
+    color: #f5f5f5; 
+}
+.colorChanger button {
+    width: 100%;
+    padding: 12px;
+    background-color: #4CAF50; 
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.colorChanger button:hover {
+    background-color: #45a049;
+}
+.ColorPreview {
+    margin: 10px 0;
+    height: 50px;
+    border: 2px solid #444444;
+    border-radius: 5px;
+    background-color: #555555; 
+    box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;  
+    align-items: center; 
+}
+/*End of the SMD RGB Color changins*/
+/*Scale for mobile*/
+@media (max-width: 768px) {
+    .MainHolder {
+        flex-direction: column;
+        align-items: center;
+    }
+    .ImageContainer {
+        order: 2;
+    }
+    .InfoContainer {
+        order: 1;
+    }
+}
+#flameBtn {
+    margin-left: 5%;
+}
+#buzzer {
+    width: 96%;
+    margin-bottom: 2%;
+    margin-left: 2%;
+}
+.chart_container{
+    margin-top: 2%;
+}
+/*Thermometer*/
+.thermometer {
+    position: relative;
+    width: 40px;
+    height: 200px;
+    background-color: #e0e0e0;
+    border-radius: 20px;
+    overflow: hidden;
+    border: 2px solid #ccc;
+    margin-bottom: 10px;
+    margin-left: 50px;
+}
+#thermometerText {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #5563659c;
+}
+#temperatureLevel{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: linear-gradient(to top, #c5ff17, #ff2600);
+    transition: height 0.5s ease;
+}
+.thermometerBulb {
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(to bottom, #0cbacd, #0818c3);
+    border-radius: 50%;
+    border: 10px solid #5100ff;
+}
+/*End of the Thermometer*/
+/*Humidity*/
+.RoundFill {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    background: #e0e0e0;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+    margin-left: 50px;
+}
+.RoundFill_Center {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f1f1f1;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.RoundFill_Radius {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: conic-gradient(
+        #1e90ff 0%,
+        #1e90ff var(--fill-percent, 0%),
+        #e0e0e0 var(--fill-percent, 0%)
+    );
+    border-radius: 50%;
+    transition: background 0.5s ease;
+}
+.RoundFill_Percentage {
+    position: relative;
+    width: 70%;
+    height: 70%;
+    background: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    font-weight: bold;
+    color: #333333;
+}
+/*End of the humidity*/
+/*Water*/
+.water_Bar {
+    width: 300px;
+    height: 60px;
+    background-color: #e0e0e0;
+    border-radius: 15px;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 10px;
+    border: 2px solid #ccc;
+    margin-left: 50px;
+}
+#water_Fill {
+    height: 100%;
+    width: 0%;
+    background-color: #0000ff;
+    padding: 20px;
+    transition: width 0.5s ease, background-color 0.5s ease;
+}
+/*End of the water*/
+/*Height*/
+.height_Bar {
+    position: relative;
+    width: 50px;
+    height: 200px;
+    background-color: #e0e0e0;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 2px solid #ccc;
+    margin-left: 50px;
+}
+.height_Bar::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to bottom, #000 1px, transparent 1px);
+    background-size: 15px 15px;
+    background-position: top left;
+}
+.height_Bar::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to bottom, transparent 10px, #000 10px);
+    background-size: 1px 10px; 
+    background-position: top left;
+}
+#height_Fill {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 0%;
+    background-color: #32cd32; 
+    transition: height 0.5s ease;
+}
+/*End of the Height*/
+/*Flame*/
+#flameIcon {
+    font-size: 50px;
+    color: red;
+    display: none; 
+    margin-bottom: 10px;
+}
+/*End of the flame*/
