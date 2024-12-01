@@ -23,7 +23,7 @@ Then this webpage gets that data and visualiaze it to the end-user
 ### Setup Instructions:
 1. **Clone this repository** to your local machine:
     ```bash
-    git clone https://github.com/yourusername/plant-monitoring-system.git
+    git clone https://github.com/AzizbekStudent/IoT_13836_PlantMonitoringSystem.git
     ```
 2. **Open the project folder** and navigate to the `index.html` file.
 3. **Configure Firebase**:
