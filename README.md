@@ -32,6 +32,8 @@ Then this webpage gets that data and visualiaze it to the end-user
 
 4. **Open the `index.html` file** in any browser. (Opera, Chrome, Mozilla and etc.)
 
+5. Or you can just open this link https://azizbekstudent.github.io/IoT_13836_PlantMonitoringSystem/WebPage/
+
 ### How to Use:
 - **View Sensor Data**: The live data for temperature, humidity, water level, flame, and plant height.
 - **Control Buzzer**: Click the "Buzzer" button to turn it on/off.

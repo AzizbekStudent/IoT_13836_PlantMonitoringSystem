@@ -13,6 +13,7 @@ body {
     padding: 20px 0;
     border-bottom: 2px solid #444444;
     margin-bottom: 3%;
+    width: 100%;
 }
 .Project_Name {
     font-size: 28px;
